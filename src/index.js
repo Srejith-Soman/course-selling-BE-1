@@ -9,11 +9,11 @@ app.use(express.json());
 app.use(cookieParser())
 app.use("/api/v1/user", userRouter);
 
-const port = 3000;
+const port = 3001;
 connect();
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World !!!");
 });
 
 app.listen(port, () => {

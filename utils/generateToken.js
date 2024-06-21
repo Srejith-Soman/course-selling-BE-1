@@ -3,10 +3,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const secretKey = process.env.SE;
+const secret_key = process.env.SECRET_KEY;
 
-const generateToken = (email) =>{
-    return jsonWebToken.sign({ data: email }, secretKey, {expiresIn: "1d"});
+export const generateToken = (email) => {
+  return jwt.sign({ data: email }, secret_key, { expiresIn: "1d" });
 };
-
-export default generateToken;
